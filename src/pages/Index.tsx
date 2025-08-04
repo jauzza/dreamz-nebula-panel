@@ -1,11 +1,12 @@
 import { useState } from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import { Upload, MessageSquare, Calendar, BarChart3, Settings } from "lucide-react";
+import { Upload, MessageSquare, Calendar, BarChart3, Settings, FolderOpen } from "lucide-react";
 import { UploadVideo } from "@/components/dashboard/UploadVideo";
 import { Announcements } from "@/components/dashboard/Announcements";
 import { ScheduledPosts } from "@/components/dashboard/ScheduledPosts";
 import { Stats } from "@/components/dashboard/Stats";
 import { DashboardSettings } from "@/components/dashboard/DashboardSettings";
+import { ChannelAssignment } from "@/components/dashboard/ChannelAssignment";
 import { DreamzLogo } from "@/components/dashboard/DreamzLogo";
 
 const Index = () => {
@@ -36,7 +37,7 @@ const Index = () => {
       {/* Main Content */}
       <div className="container mx-auto px-6 py-8">
         <Tabs value={activeTab} onValueChange={setActiveTab} className="w-full">
-          <TabsList className="grid w-full grid-cols-5 bg-dreamz-card border border-dreamz-border rounded-lg p-1">
+          <TabsList className="grid w-full grid-cols-6 bg-dreamz-card border border-dreamz-border rounded-lg p-1">
             <TabsTrigger 
               value="upload" 
               className="flex items-center gap-2 data-[state=active]:bg-dreamz-surface data-[state=active]:text-dreamz-rose"
@@ -66,6 +67,13 @@ const Index = () => {
               Stats
             </TabsTrigger>
             <TabsTrigger 
+              value="channels"
+              className="flex items-center gap-2 data-[state=active]:bg-dreamz-surface data-[state=active]:text-dreamz-rose"
+            >
+              <FolderOpen className="h-4 w-4" />
+              Channels
+            </TabsTrigger>
+            <TabsTrigger 
               value="settings"
               className="flex items-center gap-2 data-[state=active]:bg-dreamz-surface data-[state=active]:text-dreamz-rose"
             >
@@ -89,6 +97,10 @@ const Index = () => {
             
             <TabsContent value="stats" className="space-y-6">
               <Stats />
+            </TabsContent>
+            
+            <TabsContent value="channels" className="space-y-6">
+              <ChannelAssignment />
             </TabsContent>
             
             <TabsContent value="settings" className="space-y-6">

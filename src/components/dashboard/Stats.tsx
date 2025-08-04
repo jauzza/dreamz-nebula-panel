@@ -1,6 +1,6 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, ResponsiveContainer, PieChart, Pie, Cell } from "recharts";
-import { TrendingUp, Video, MessageSquare, Users, Eye } from "lucide-react";
+import { TrendingUp, Video, MessageSquare, Users, Eye, Activity, Zap, Clock } from "lucide-react";
 
 const mockBarData = [
   { name: "Mon", videos: 4, announcements: 2 },
@@ -56,6 +56,57 @@ export const Stats = () => {
       <div>
         <h2 className="text-3xl font-bold text-foreground">Analytics Dashboard</h2>
         <p className="text-muted-foreground mt-2">Track your content performance and engagement metrics</p>
+      </div>
+
+      {/* Bot Status Cards */}
+      <div className="grid gap-4 md:grid-cols-3 mb-6">
+        <Card className="bg-dreamz-card border-dreamz-border">
+          <CardContent className="p-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-medium text-muted-foreground">Bot Status</p>
+                <div className="flex items-center gap-2 mt-1">
+                  <div className="w-2 h-2 rounded-full bg-green-500"></div>
+                  <h2 className="text-xl font-bold text-foreground">Online</h2>
+                </div>
+                <p className="text-xs text-green-500 mt-1">All systems operational</p>
+              </div>
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-green-500 to-green-600 flex items-center justify-center">
+                <Activity className="h-6 w-6 text-white" />
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-dreamz-card border-dreamz-border">
+          <CardContent className="p-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-medium text-muted-foreground">Uptime</p>
+                <h2 className="text-xl font-bold text-foreground">15d 7h 23m</h2>
+                <p className="text-xs text-dreamz-rose mt-1">99.8% this month</p>
+              </div>
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-dreamz-rose to-dreamz-purple flex items-center justify-center">
+                <Clock className="h-6 w-6 text-white" />
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-dreamz-card border-dreamz-border">
+          <CardContent className="p-6">
+            <div className="flex items-center justify-between">
+              <div>
+                <p className="text-sm font-medium text-muted-foreground">Response Time</p>
+                <h2 className="text-xl font-bold text-foreground">120ms</h2>
+                <p className="text-xs text-dreamz-rose mt-1">Avg last 24h</p>
+              </div>
+              <div className="w-12 h-12 rounded-lg bg-gradient-to-br from-dreamz-rose to-dreamz-purple flex items-center justify-center">
+                <Zap className="h-6 w-6 text-white" />
+              </div>
+            </div>
+          </CardContent>
+        </Card>
       </div>
 
       {/* Stat Cards */}
