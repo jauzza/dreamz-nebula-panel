@@ -52,6 +52,14 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				dreamz: {
+					rose: 'hsl(var(--dreamz-rose))',
+					purple: 'hsl(var(--dreamz-purple))',
+					dark: 'hsl(var(--dreamz-dark))',
+					card: 'hsl(var(--dreamz-card))',
+					surface: 'hsl(var(--dreamz-surface))',
+					border: 'hsl(var(--dreamz-border))',
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',

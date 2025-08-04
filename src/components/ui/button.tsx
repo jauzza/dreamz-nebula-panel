@@ -18,6 +18,9 @@ const buttonVariants = cva(
           "bg-secondary text-secondary-foreground hover:bg-secondary/80",
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
+        dreamz: "bg-gradient-to-r from-dreamz-rose to-dreamz-purple text-white hover:opacity-90 shadow-lg",
+        dreamzOutline: "border border-dreamz-rose bg-transparent text-dreamz-rose hover:bg-dreamz-rose hover:text-white",
+        tab: "bg-transparent text-muted-foreground hover:text-foreground hover:bg-muted data-[state=active]:bg-dreamz-card data-[state=active]:text-dreamz-rose border-b-2 border-transparent data-[state=active]:border-dreamz-rose rounded-none",
       },
       size: {
         default: "h-10 px-4 py-2",
