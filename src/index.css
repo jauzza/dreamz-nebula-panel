@@ -36,7 +36,7 @@ All colors MUST be HSL.
     --input: 240 10% 12%;
     --ring: 330 81% 60%;
 
-    /* Custom design tokens for Dreamz dashboard */
+    /* Custom design tokens for Dreamz dashboard - Discord-inspired */
     --dreamz-rose: 330 81% 60%;
     --dreamz-purple: 262 83% 58%;
     --dreamz-dark: 240 10% 6%;
@@ -44,13 +44,25 @@ All colors MUST be HSL.
     --dreamz-surface: 240 10% 10%;
     --dreamz-border: 240 10% 15%;
     
+    /* Discord-inspired colors */
+    --discord-blurple: 235 86% 65%;
+    --discord-dark: 240 11% 13%;
+    --discord-darker: 240 11% 9%;
+    --discord-green: 139 47% 43%;
+    --discord-yellow: 38 96% 54%;
+    --discord-red: 359 82% 59%;
+    --discord-boost: 270 100% 75%;
+    
     /* Gradients */
     --gradient-primary: linear-gradient(135deg, hsl(var(--dreamz-rose)), hsl(var(--dreamz-purple)));
     --gradient-card: linear-gradient(145deg, hsl(var(--dreamz-card)), hsl(var(--dreamz-surface)));
+    --gradient-discord: linear-gradient(135deg, hsl(var(--discord-blurple)), hsl(var(--discord-boost)));
+    --gradient-premium: linear-gradient(135deg, hsl(var(--discord-boost)), hsl(var(--dreamz-purple)));
     
     /* Shadows */
     --shadow-glow: 0 0 20px hsl(var(--dreamz-rose) / 0.2);
     --shadow-card: 0 4px 6px -1px hsl(240 10% 3% / 0.3), 0 2px 4px -1px hsl(240 10% 3% / 0.2);
+    --shadow-premium: 0 0 30px hsl(var(--discord-boost) / 0.3);
 
     --radius: 0.5rem;
 
